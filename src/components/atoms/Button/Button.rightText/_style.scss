@@ -1,0 +1,52 @@
+/*
+  constant.scss ( 참고)
+  basicBoxSetting(display, align-items, justify-content)
+  
+*/
+
+._btn_right_txt_div {
+    border-top: 1px solid #ededed;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    padding: 16px 15px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+    color: #2c3134;
+    display: flex;
+    align-items: center;
+    &:hover {
+        background-color: $basic_menu_hover_color;
+    }
+    ._btn_div {
+        display: flex;
+        ._icon {
+            font-size: 25px;
+            margin-right: 13px;
+        }
+        ._txt {
+            width: 100%;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.8px;
+            color: #2c3134;
+            margin-top: 6px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    ._dim {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        position: absolute;
+        opacity: 0.7;
+        top: 0;
+        z-index: 101;
+    }
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- 운영 -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=928d2d88e9ee399022bab8eb25812729&libraries=services&autoload=true"></script>
+
+    <!-- 개발 -->
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=672e5859a54ac9e8b09ee7be5e656113&libraries=services&autoload=true"></script> -->
+
+    <meta charset="utf-8" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="용인시 AI 민원상담" />
+    <meta property="og:locale" content="ko_KR" />
+
+
+    <meta property="og:url" content="https://www.yongin.go.kr/chat">
+    <meta property="og:site_name" content="용인시 AI 민원상담">
+    <meta property="og:image" content="https://www.yongin.go.kr/chat/ibricks/images/ogImage.png">
+    <meta property="og:description" content="용인시청 인공지능 민원상담사 조아용입니다. 보건복지, 행정민원, 여권, 지방세, 상하수도 요금, 차량등록, 환경, 교통, 기후 9개 분야의 정보를 안내해 드립니다." />
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+
+    <link rel="shortcut icon" href="/chat/ibricks/favicon.ico" />
+    <!-- 모바일용웹 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="icon" href="/chat/ibricks/favicon.ico" />
+    <!-- ios홈화면추가시 상단 주소창 제거 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="/chat/ibricks/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    </style>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+    <title>용인시 AI 민원상담</title>
+    <script>
+        if (typeof Object.assign != 'function') {
+            Object.defineProperty(Object, "assign", {
+                value: function assign(target, varArgs) {
+                    'use strict';
+                    if (target == null) {
+                        throw new TypeError('Cannot convert undefined or null to object');
+                    }
+                    var to = Object(target);
+                    for (var index = 1; index < arguments.length; index++) {
+                        var nextSource = arguments[index];
+                        if (nextSource != null) {
+                            for (var nextKey in nextSource) {
+                                if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+                                    to[nextKey] = nextSource[nextKey];
+                                }
+                            }
+                        }
+                    }
+                    return to;
+                },
+                writable: true,
+                configurable: true
+            });
+        }
+        if (!Array.from) {
+            Array.from = (function() {
+                var toStr = Object.prototype.toString;
+                var isCallable = function(fn) {
+                    return typeof fn === 'function' || toStr.call(fn) === '[object Function]';
+                };
+                var toInteger = function(value) {
+                    var number = Number(value);
+                    if (isNaN(number)) {
+                        return 0;
+                    }
+                    if (number === 0 || !isFinite(number)) {
+                        return number;
+                    }
+                    return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
+                };
+                var maxSafeInteger = Math.pow(2, 53) - 1;
+                var toLength = function(value) {
+                    var len = toInteger(value);
+                    return Math.min(Math.max(len, 0), maxSafeInteger);
+                };
+                // The length property of the from method is 1.
+                return function from(arrayLike /*, mapFn, thisArg */ ) { // 1. Let C be the this value. 
+                    var C = this; // 2. Let items be ToObject(arrayLike).
+                    var items = Object(arrayLike); // 3. ReturnIfAbrupt(items). 
+                    if (arrayLike == null) {
+                        throw new TypeError("Array.from requires an array-like object - not null or undefined");
+                    }
+                    // 4. If mapfn is undefined, then let mapping be false.
+                    var mapFn = arguments.length > 1 ? arguments[1] : void undefined;
+                    var T;
+                    if (typeof mapFn !== 'undefined') {
+                        // 5. else 
+                        // 5. a If IsCallable(mapfn) is false, throw a TypeError exception.
+                        if (!isCallable(mapFn)) {
+                            throw new TypeError('Array.from: when provided, the second argument must be a function');
+                        }
+                        // 5. b. If thisArg was supplied, let T be thisArg; else let T be undefined.
+                        if (arguments.length > 2) {
+                            T = arguments[2];
+                        }
+                    }
+                    // 10. Let lenValue be Get(items, "length"). 
+                    // 11. Let len be ToLength(lenValue). 
+                    var len = toLength(items.length);
+                    // 13. If IsConstructor(C) is true, then 
+                    // 13. a. Let A be the result of calling the [[Construct]] internal method of C with an argument list containing the single item len. 
+                    // 14. a. Else, Let A be ArrayCreate(len). 
+                    var A = isCallable(C) ? Object(new C(len)) : new Array(len);
+                    // 16. Let k be 0. 
+                    var k = 0;
+                    // 17. Repeat, while k < len… (also steps a - h) 
+                    var kValue;
+                    while (k < len) {
+                        kValue = items[k];
+                        if (mapFn) {
+                            A[k] = typeof T === 'undefined' ? mapFn(kValue, k) : mapFn.call(T, kValue, k);
+                        } else {
+                            A[k] = kValue;
+                        }
+                        k += 1;
+                    }
+                    // 18. Let putStatus be Put(A, "length", len, true).
+                    A.length = len;
+                    // 20. Return A.
+                    return A;
+                };
+            }());
+        }
+        if (!String.prototype.includes) {
+            String.prototype.includes = function(search, start) {
+                'use strict';
+                if (typeof start !== 'number') {
+                    start = 0;
+                }
+                if (start + search.length > this.length) {
+                    return false;
+                } else {
+                    return this.indexOf(search, start) !== -1;
+                }
+            };
+        }
+        if (!Math.trunc) {
+            Math.trunc = function(v) {
+                return v < 0 ? Math.ceil(v) : Math.floor(v);
+            };
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@7/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/core-js-bundle@3.1.4/index.js"></script>
+    <script src="https://unpkg.com/regenerator-runtime@0.13.3/runtime.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+</body>
+
+
+</html>

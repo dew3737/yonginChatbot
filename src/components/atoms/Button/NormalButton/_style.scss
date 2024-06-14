@@ -1,0 +1,42 @@
+/*
+  constant.scss ( 참고)
+
+  basicBoxSetting(display, align-items, justify-content)
+  
+*/
+
+._normal_button_div{
+  position: relative;
+  width:100%;
+  height: 100px;
+  @include basicBoxSetting();
+  float:left;
+  ._button_div{
+    float:left;
+    padding:0 10px;
+    margin-right:5px;
+    width:100%;
+    height:40px;
+    @include basicBoxSetting();
+    border-radius: 3px;
+    color:inherit;
+    cursor: pointer;
+    z-index:100;
+    ._icon{
+      font-size:12px;
+      margin-right:5px;
+    }
+    ._text{
+      font-size:12px;
+    }
+  }
+  ._dim{
+    width:100%;
+    height:100%;
+    background-color: #eee;
+    position: absolute;
+    opacity: .7;
+    top:0;
+    z-index:101;
+  }
+}

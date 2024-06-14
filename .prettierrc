@@ -1,0 +1,11 @@
+{
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "printWidth": 160,
+  "semi": true,
+  "singleQuote": true,
+  "parser":"flow",
+  "arrowParens":"avoid",
+  "useTabs":false,
+  "withNodeModules": true
+}

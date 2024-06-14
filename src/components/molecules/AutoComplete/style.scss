@@ -1,0 +1,41 @@
+.auto_complete_div {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: calc(100%);
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    margin-bottom: 50px;
+    background-color: #f9f9f9;
+    z-index: 1000;
+    opacity: 1;
+    border-bottom: 0px;
+    transition: height 0.2s;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    button {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #EDEDED;
+        box-sizing: border-box;
+        padding: 8px 14px;
+        height: 35px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000;
+        vertical-align: middle;
+        &:hover {
+            // background-color: #ecf7ff;
+            color: rgb(13, 186, 200);
+        }
+    }
+    ._sel {
+        color: rgb(13, 186, 200);
+        // font-size: 15px;
+    }
+}

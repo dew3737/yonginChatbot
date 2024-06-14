@@ -1,0 +1,19 @@
+{
+  "runmode": "local",
+  "local": {
+    "DEBUG_LEVEL": "debug",
+    "DM_HOST":"127.0.0.1:7002",
+    "API_HOST":"127.0.0.1:7003",
+    "DOMAIN_ID":"yongin",
+    "DM_TOKEN":"826119D2-F590-4FA3-BA7E-0717869D40B1",
+    "EXPRESS_PORT":7005
+  },
+  "dev": {
+    "DEBUG_LEVEL": "debug",
+    "DM_HOST":"127.0.0.1:7002",
+    "API_HOST":"127.0.0.1:7003",
+    "DOMAIN_ID":"yongin_copy",
+    "DM_TOKEN":"826119D2-F590-4FA3-BA7E-0717869D40B1",
+    "EXPRESS_PORT":7005
+  }
+}

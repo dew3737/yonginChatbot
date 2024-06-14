@@ -1,0 +1,66 @@
+.left_setting_area {
+    min-width: 320px;
+    box-shadow: 0 20px 30px -15px grey;
+    background-color: #fff;
+    overflow: hidden;
+    z-index: 200;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    transition: height 0.3s;
+    &_menu {
+        background-color: #fff;
+        border-top: 1px solid #ededed;
+        width: 100%;
+        height: 50px;
+        padding: 15px 15px;
+        box-sizing: border-box;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.7px;
+        color: #2c3134;
+        position: relative;
+        .check_box {
+            position: absolute;
+            width: 100%;
+            min-width: 250px;
+            right: 0;
+            top: 16px;
+            text-align: right;
+            margin-right: 10px;
+            & input {
+                // display: none;
+		display: inline-grid;
+            }
+            .label {
+                margin-right: 7px;
+                border: 1px $basic_button_color solid;
+                padding: 5px 15px 5px 16px;
+                border-radius: 20px;
+                cursor: pointer;
+                color: $basic_button_color;
+                font-weight: 400;
+                font-size: 14px;
+            }
+            & input:checked+label {
+                background-color: $basic_button_color;
+                color: $basic_chat_message_bg_color;
+            }
+            [type="radio"]:focus + label {
+                border-color: #86b7fe;
+                outline: 0;
+                box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+                border-radius: 1rem;
+                }
+
+        }
+    }
+    &_menu:last-child {
+        @include basicBoxSetting();
+    }
+    &_menu:last-child:hover {
+        background-color: #ecf7ff;
+        cursor: pointer;
+    }
+}

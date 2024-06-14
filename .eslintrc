@@ -1,0 +1,77 @@
+{
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["prettier", "jsx-a11y"],
+  "extends": ["airbnb","prettier/react", "eslint:recommended","plugin:prettier/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "ignorePatterns": [
+    "node_modules/"
+  ],
+  "rules": {
+	  "jsx-a11y/tabindex-no-positive": "off",
+    "prettier/prettier": ["warn",{"endOfLine":"auto"}],
+    "react/jsx-filename-extension":
+    ["error",
+      { "extensions": [".js", ".jsx"] }
+    ],
+
+    // error case
+    "object-shorthand": ["error", "always", { "avoidQuotes": true }],
+    "no-extend-native": ["error", { "exceptions": ["Object"] }],
+    // "max-len": ["error", { "code": 200, "tabWidth": 4 }],
+    "arrow-body-style": "off",
+    "brace-style": "error",
+    "curly": "error",
+    "eqeqeq": "error",
+    // off
+    "jsx-a11y/mouse-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "comma-dangle": "off",
+    "prefer-destructuring": 0,
+    "no-use-before-define": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": "off",
+    "camelcase": "off",
+    "no-undef": "off",
+    "no-param-reassign": "off",
+    "prefer-template": "off",
+    "import/newline-after-import": "off",
+    "import/no-dynamic-require": "off",
+    "no-console": "off",
+    "guard-for-in": "off",
+    "no-restricted-syntax": "off",
+    "no-alert": "off",
+    "func-names":"off",
+    "arrow-parens": "off",
+    "implicit-arrow-linebreak": "off",
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "react/no-array-index-key": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "import/no-absolute-path": "off",
+    "import/extensions": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/img-redundant-alt": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "no-return-await": "off",
+    "no-nested-ternary":"off"
+  }
+}

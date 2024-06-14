@@ -1,0 +1,51 @@
+._customer_message_div{
+  width: 100%;
+  float: right;
+  margin-top: 20px;
+  // margin-bottom: 10px;
+  ._chat_message_template_set{
+    float:right;
+    padding-left:5px;
+    width:100%;
+    ._text_div{
+      width:100%;
+      float:right;
+      ._text{
+        margin-right: 15px;
+        float:right;
+        max-width: 470px;
+        background-color: #0061AF;
+        color: white;
+        padding: 12px;
+        border-radius: 8px 0 8px 8px;
+        font-size: 14px;
+        font-family: 'noto sans kr';
+        font-weight: 400;
+        margin-bottom: 7px;
+        box-sizing: border-box;
+        display: inline-block;
+        line-height: 21px;
+      }
+    }
+  }
+  ._time{
+    width: auto;
+    float: right;
+    font-size: 11px;
+    color: #666;
+    font-weight: 200;
+    padding-right: 17px;
+    top: -3px;
+    position: relative;
+    font-family: 'montserrat';
+  }
+}
+
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* Enter your style code */
+  ._customer_message_div{
+    margin: 70px 0 30px 0;
+  }
+ }

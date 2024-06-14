@@ -1,0 +1,94 @@
+._satisfy_bg .feedback_area {
+    background-color: #FFF;
+    width: 50%;
+    height: 370px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    max-width: 400px;
+    min-width: 300px;
+    border-radius: 10px;
+    .ri-close-line {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+        font-size: 30px;
+        display: flex;
+        height: 30px;
+        line-height: 30px;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+    .opnion_icon {
+        font-size: 16px;
+        display: flex;
+        color: rgb(0, 97, 175);
+        margin: 10px;
+    }
+    .fd_name {
+        font-family: 'noto sans kr';
+        letter-spacing: -0.8px;
+        font-weight: 400;
+        margin-top: 18px;
+        text-align: center;
+        margin-top: 7px;
+        font-size: 16px;
+    }
+    .star_set {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 40px;
+    }
+    .fd_name {
+        text-align: center;
+        margin-top: 7px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .feed_input_textarea {
+        border: none;
+        width: 100%;
+        height: 135px;
+        border-radius: 8px;
+        background-color: #F5F5F5;
+        resize: none;
+        outline: none;
+        padding: 12px;
+        box-sizing: border-box;
+        font-family: 'noto sans kr';
+        font-size: 14px;
+    }
+    .fd_send_btn {
+        background-color: #0061AF;
+        // padding: 12px 15px;
+        box-sizing: border-box;
+        width: 35%;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 16px;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+        cursor: pointer;
+        height: 40px;
+        display: block;
+    }
+    .disabled {
+        background-color: #e0e0e0;
+    }
+    // .feed_content {
+    //     .feed_star_box {
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         width: 100%;
+    //         height: 40px;
+    //     }
+    // }
+}

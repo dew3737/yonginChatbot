@@ -1,0 +1,11 @@
+.menu_bar {
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 50px;
+    width: 250px;
+    height: 100%;
+    z-index: 200;
+    right: 0;
+    z-index: 200;
+    transition: width 0.3s;
+}

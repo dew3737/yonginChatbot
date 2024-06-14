@@ -1,0 +1,16 @@
+.popup_image_main {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 50px;
+    right: 0px;
+    cursor: pointer;
+    img {
+        top: 50%;
+        position: fixed;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: contain;
+    }
+}
